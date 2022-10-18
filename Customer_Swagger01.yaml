@@ -1,0 +1,410 @@
+swagger: "2.0"
+info:
+  description: "This is for Customer API"
+  version: "2.0.0"
+  title: "Customer Swagger Documenttion"
+  contact:
+    name: "Jack Lord Hermoso"
+    email: "jack.lord.hermoso@gmail.com"
+basePath: "/v1/"
+tags:
+- name: "Customer API"
+  description: "Adding, deleting and retrieving"
+schemes:
+- "https"
+
+paths:
+  /CustomerRecords/v1/customer/getRecord/{customerId}:
+    get:
+      tags:
+      - "Retrieve Transaction"
+      summary: "Retrieve the customer records"
+      description: "Retrieve the customer records"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+        - $ref: "#/parameters/Authorization"
+        - $ref: "#/parameters/Content-Type"
+        - name: "customerId"
+          in: "path"
+          description: "The custoer unique id"
+          required: true
+          type: "string"
+          format: "CUST-00000X"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/SuccessfulResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+
+  /CustomerRecords/v1/customer/saveRecords:
+    post:
+      tags:
+      - "Add transactions"
+      summary: "request to add records"
+      description: "request to add new records"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"      
+      parameters:
+      - $ref: "#/parameters/Authorization"
+      - $ref: "#/parameters/Content-Type"      
+      - in: "body"
+        name: "body"
+        description: "Customer Data"
+        required: true
+        schema:
+          $ref: "#/definitions/CustomerRecords"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/SuccessfulResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+      
+  /CustomerRecords/v1/customer/updateRecords:
+    put:
+      tags:
+      - "Update Transaction"
+      summary: "This is to update the Existing Customer"
+      description: "This is to update the Existing Customer"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - $ref: "#/parameters/Authorization"
+      - $ref: "#/parameters/Content-Type"      
+      - in: "body"
+        name: "body"
+        description: "Customer Data"
+        required: true
+        schema:
+          $ref: "#/definitions/CustomerRecords"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/SuccessfulResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+
+  /CustomerRecords/v1/customer/deleteRecord/{customerId}:
+    delete:
+      tags:
+      - "delete transaction"
+      summary: "This is to request deletion on a particular transaction"
+      description: "This is to request deletion on a particular transaction"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - $ref: "#/parameters/Authorization"
+      - $ref: "#/parameters/Content-Type"
+      - name: "customerId"
+        in: "path"
+        description: "The custoer unique id"
+        required: true
+        type: "string"
+        format: "CUST-00000X"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/SuccessfulResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+        
+  /CustomerRecords/v1/customer/getAllRecords:
+    get:
+      tags:
+      - "Retrieve All transactions"
+      summary: "This is to get all the transaction"
+      description: "This is to get all the transaction"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - $ref: "#/parameters/Authorization"
+      - $ref: "#/parameters/Content-Type"            
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/SuccessfulResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+
+  /CustomerRecords/auth:
+    post:
+      tags:
+      - "Request for a new token"
+      summary: "This will generate the new JWT token"
+      description: "This will generate the new JWT token"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - $ref: "#/parameters/Content-Type"
+      - in: "body"
+        name: "body"
+        description: "User Data"
+        required: true
+        schema:
+          $ref: "#/definitions/UserRecords"
+      responses:
+        200:
+          description: "Successful"
+          schema:
+            $ref: "#/definitions/TokenResponse"
+        400:
+          $ref: '#/responses/BadRequest'
+        401:
+          $ref: '#/responses/Unauthorised'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        406:
+          $ref: '#/responses/NotAcceptable'
+        409:
+          $ref: '#/responses/Conflict'
+        500:
+          $ref: '#/responses/ServerError'
+        501:
+          $ref: '#/responses/NotImplemented'
+        
+definitions:
+  
+  # ===================================================================
+  # Definitions
+  # ===================================================================
+
+  SuccessfulResponse:
+    allOf:
+      - properties:
+          data:
+            type: object
+            properties:
+              customerId:
+                type: "string"
+                format: "string"
+                example: "CUST-000X"
+              status:
+                type: "string"
+                format: "string"
+                example: "SUCCESS"
+              message:
+                type: "string"
+                format: "string"
+                example: "Record save is successful"
+
+  GenericError:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: date and time created converted into integer.
+        example: "1633266850269"
+      status:
+        type: integer
+        description: The HTTP status code applicable to this problem
+        example: "40x or 50x"
+      error:
+        type: string
+        description: An application-specific error description
+        example: "Not Found"
+      message:
+        type: string
+        example: "No message available"
+      path:
+        type: string
+        description: "the used path for api"
+        example: "/CustomerRecords/v1/customer/records"
+            
+  GenericErrors:
+    type: object
+    properties:
+      errors:
+        type: array
+        items:
+          $ref: '#/definitions/GenericError'
+
+  CustomerRecords:
+    type: "object"
+    properties:
+      dateOfBirth:
+         type: "string"
+         format: "yyyy-mm-dd hh:mm:ss"
+         example: "1999-01-05T14:56:22Z"
+      fistName:
+        type: "string"
+        format: "string"
+        minimum: 0
+        maximum: 200
+        example: "Kate"
+      lastName:
+        type: "string"
+        format: "string"
+        minimum: 0
+        maximum: 200
+        example: "Lica"
+        
+  UserRecords:
+    type: "object"
+    properties:
+      username:
+         type: "string"
+         format: "string"
+         example: "admin"
+      password:
+        type: "string"
+        format: "string"
+        example: "admin"
+        
+  TokenResponse:
+    type: "object"
+    properties:
+      token:
+         type: "string"
+         format: "header.payload.signature"
+         example: "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzMzg3MDg3NSwiaWF0IjoxNjMzMjY2MDc1fQ.iCRxwavDQdNuP3ZlfGEV7f0hw45g-qLFFzgipQwuLCKSAB8Zx55swpioBhlbZza7TuIbSuRLEbl2nGy2ln8EGg"
+
+parameters:
+
+  Content-Type:
+    name:         Content-Type
+    description:  "Request Content Type"
+    in:           header
+    required:     true
+    type:         string
+    
+  Authorization:
+    in:           header
+    name:         Authorization
+    description:  "Request a token using the auth api"
+    required:     true
+    type: "string"
+    format: "string"
+    minLength: 1
+    maxLength: 500
+
+responses:
+
+  BadRequest:
+    description: Bad Request. The request was invalid or cannot be otherwise served
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  NotFound:
+    description: Resource Not found.
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  Unauthorised:
+    description: Unauthorized. Authentication credentials were missing or incorrect
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  Forbidden:
+    description: Forbidden. The request was valid but access is denied
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  Conflict:
+    description: Conflict.
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  NotAcceptable:
+    description: Not Acceptable.
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  NotImplemented:
+    description: Not Implemented.
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  ServerError:
+    description: Internal Server Error
+    schema:
+      $ref: '#/definitions/GenericErrors'
+  GeneralError:
+    description: Unexpected error.
+    schema:
+      $ref: '#/definitions/GenericErrors'
+ 
+ 

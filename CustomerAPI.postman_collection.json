@@ -1,0 +1,269 @@
+{
+	"id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+	"name": "AlintaCustomerAPI",
+	"description": "",
+	"order": [
+		"dad7f3d2-a396-9188-e65c-40dd87827649",
+		"ec7cd96d-966c-afd7-cf73-5c118a48ca50",
+		"489e5d3a-e599-7ac5-b795-4753d801b0e6",
+		"c41baff4-c21a-7c1f-7291-b1094b9d6f02",
+		"84422bd6-09f0-8177-953e-e2e5606d6e05",
+		"3eb70553-e32f-fa30-f6f0-6176a88c737b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1633263561626,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "3eb70553-e32f-fa30-f6f0-6176a88c737b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/BankCustRecords/auth",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542576825251,
+			"name": "GenerateToken",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "b4174cb1-9d1a-c24f-c030-7ba35e464ce5",
+			"collection_id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"rawModeData": "{\n\t\"username\": \"admin\",\n    \"password\": \"admin\"\n}"
+		},
+		{
+			"id": "489e5d3a-e599-7ac5-b795-4753d801b0e6",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/BankCustRecords/v1/customer/records/CUST-000001",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541517334663,
+			"name": "GetCustomerRecordCustomerId",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "8be8d0d8-f08f-dd07-572a-62e6efaffb09",
+			"collection_id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"rawModeData": ""
+		},
+		{
+			"id": "84422bd6-09f0-8177-953e-e2e5606d6e05",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/BankCustRecords/v1/customer/records/CUST-000003",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541520075065,
+			"name": "DeleteCustomerRecords",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "39e71f04-74ea-0601-1ee8-a9bce88a1da6",
+			"collection_id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0"
+		},
+		{
+			"id": "c41baff4-c21a-7c1f-7291-b1094b9d6f02",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/BankCustRecords/v1/customer/records",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1541140869447,
+			"name": "GetCustomerRecordAll",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "dd229f93-b2db-9347-c8cd-923b45e9d634",
+			"collection_id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"rawModeData": ""
+		},
+		{
+			"id": "dad7f3d2-a396-9188-e65c-40dd87827649",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MzE4MTYzNSwiaWF0IjoxNTQyNTc2ODM1fQ.zwkHN0KMIQIJBsPUTqKLRWDFgk0Jjk-h30B8Cva6be5Jga4V76Mu9_sup0zCINXNtOKqvBk90bDVKNKAjcuxeA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MzE4MTYzNSwiaWF0IjoxNTQyNTc2ODM1fQ.zwkHN0KMIQIJBsPUTqKLRWDFgk0Jjk-h30B8Cva6be5Jga4V76Mu9_sup0zCINXNtOKqvBk90bDVKNKAjcuxeA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/BankCustRecords/v1/customer/records",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542576890274,
+			"name": "AddCustomerRecords",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "295e4f61-9f0a-642d-9018-87967bdf0ac5",
+			"collection_id": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"rawModeData": "[{\n\t\"dateTime\": \"2018-01-01T14:56:22Z\",\n\t\"fullName\": \"Hermoso, Jack Lord L.\",\n\t\"initials\": \"JLH\",\n\t\"title\": \"Mr.\",\n\t\"sex\": \"Male\",\n\t\"maritalStatus\": \"Single\",\n\t\"creditRatings\": 5,\n\t\"nabCustomer\": \"YES\",\n\t\"addressrecordsList\": \n\t\t[{\n\t\t\t\"streetNo\": 54,\n\t\t\t\"streetName\": \"Sample Street\",\n\t\t\t\"suburb\": \"Truganina\",\n\t\t\t\"city\": \"Melbourne\",\n\t\t\t\"state\": \"VIC\",\n\t\t\t\"country\": \"AUSTRALIA\",\n\t\t\t\"pinCode\": \"0421\"\n\t\t}]\n},{\n\t\"dateTime\": \"2018-01-01T14:56:22Z\",\n\t\"fullName\": \"Hermoso, Johnny P.\",\n\t\"initials\": \"JPH\",\n\t\"title\": \"Mr.\",\n\t\"sex\": \"Male\",\n\t\"maritalStatus\": \"Single\",\n\t\"creditRatings\": 5,\n\t\"nabCustomer\": \"YES\",\n\t\"addressrecordsList\": \n\t\t[{\n\t\t\t\"streetNo\": 54,\n\t\t\t\"streetName\": \"Sample Street\",\n\t\t\t\"suburb\": \"Truganina\",\n\t\t\t\"city\": \"Melbourne\",\n\t\t\t\"state\": \"VIC\",\n\t\t\t\"country\": \"AUSTRALIA\",\n\t\t\t\"pinCode\": \"0421\"\n\t\t}]\n}]"
+		},
+		{
+			"id": "ec7cd96d-966c-afd7-cf73-5c118a48ca50",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU0MTY2NDYwMywiaWF0IjoxNTQxMDU5ODAzfQ.jrsrH64uI3TavgNXswCGl6jySPL4FxhjjiRItzDDiFboO5TpTFhtg6WU_OLHNaCif3fBhhPGANU_ovDywmGURA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/AlintaCustRecords/v1/customer/records",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1633265080788,
+			"name": "UpdateCustomerRecords",
+			"description": "",
+			"collectionId": "ab4fd5bc-3eba-63a7-1be6-d00a8377d8c0",
+			"responses": [],
+			"rawModeData": "[{\n\t\"dateOfBirth\": \"1999-01-05T14:56:22Z\",\n\t\"fistName\": \"Kate\",\n\t\"lastName\": \"Hermoso\"\n}]"
+		}
+	]
+}
