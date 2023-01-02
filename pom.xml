@@ -119,7 +119,7 @@
   </dependencies>
   
   <build>
-  <finalName>CustmerAPI</finalName>
+  <finalName>AlintaCustAPI</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>

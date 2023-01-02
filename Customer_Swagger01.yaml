@@ -1,25 +1,25 @@
 swagger: "2.0"
 info:
-  description: "This is for Customer API"
+  description: "This is for Alinta Customer API"
   version: "2.0.0"
-  title: "Customer Swagger Documenttion"
+  title: "Alinta Swagger Documenttion"
   contact:
     name: "Jack Lord Hermoso"
     email: "jack.lord.hermoso@gmail.com"
 basePath: "/v1/"
 tags:
-- name: "Customer API"
+- name: "Alinta Customer API"
   description: "Adding, deleting and retrieving"
 schemes:
 - "https"
 
 paths:
-  /CustomerRecords/v1/customer/getRecord/{customerId}:
+  /AlintaCustRecords/v1/customer/getRecord/{customerId}:
     get:
       tags:
       - "Retrieve Transaction"
-      summary: "Retrieve the customer records"
-      description: "Retrieve the customer records"
+      summary: "Retrieve the customer records of alinta"
+      description: "Retrieve the customer records of alinta"
       consumes:
       - "application/json"
       produces:
@@ -55,7 +55,7 @@ paths:
         501:
           $ref: '#/responses/NotImplemented'
 
-  /CustomerRecords/v1/customer/saveRecords:
+  /AlintaCustRecords/v1/customer/saveRecords:
     post:
       tags:
       - "Add transactions"
@@ -96,12 +96,12 @@ paths:
         501:
           $ref: '#/responses/NotImplemented'
       
-  /CustomerRecords/v1/customer/updateRecords:
+  /AlintaCustRecords/v1/customer/updateRecords:
     put:
       tags:
       - "Update Transaction"
-      summary: "This is to update the Existing Customer"
-      description: "This is to update the Existing Customer"
+      summary: "This is to update the Alinta Existing Customer"
+      description: "This is to update the Alinta Existing Customer"
       consumes:
       - "application/json"
       produces:
@@ -137,7 +137,7 @@ paths:
         501:
           $ref: '#/responses/NotImplemented'
 
-  /CustomerRecords/v1/customer/deleteRecord/{customerId}:
+  /AlintaCustRecords/v1/customer/deleteRecord/{customerId}:
     delete:
       tags:
       - "delete transaction"
@@ -178,7 +178,7 @@ paths:
         501:
           $ref: '#/responses/NotImplemented'
         
-  /CustomerRecords/v1/customer/getAllRecords:
+  /AlintaCustRecords/v1/customer/getAllRecords:
     get:
       tags:
       - "Retrieve All transactions"
@@ -213,7 +213,7 @@ paths:
         501:
           $ref: '#/responses/NotImplemented'
 
-  /CustomerRecords/auth:
+  /AlintaCustRecords/auth:
     post:
       tags:
       - "Request for a new token"
@@ -299,7 +299,7 @@ definitions:
       path:
         type: string
         description: "the used path for api"
-        example: "/CustomerRecords/v1/customer/records"
+        example: "/AlintaCustRecords/v1/customer/records"
             
   GenericErrors:
     type: object
